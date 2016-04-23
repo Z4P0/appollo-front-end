@@ -25,7 +25,7 @@ html(lang="en").no-js
             div.page-section
               //- profile progress meter
               .profile-progress
-                span.circle 1
+                span.circle.active 1
                 span.circle 2
                 span.circle 3
                 span.circle 4
@@ -35,19 +35,93 @@ html(lang="en").no-js
               hr
               //- info holder things
               #profile-questions.profile-questions
-                #step-1.profile-question
+                #step-1.profile-question.active
                   //- title/ field name
                   h3.field-title 1. Your Name:
                   //- input
-                  input(type="text", name="name", placeholder="Firstname Lastname")
+                  input#name(type="text", name="name", placeholder="Firstname Lastname")
                   //- controls/ next-prev
                   div
                     a(href="#step-2").button Ok
                 #step-2.profile-question
                   //- title/ field name
                   h3.field-title 2. Birthday:
-                  //- input
-                  input(type="text", name="name", placeholder="Firstname Lastname")
+                  .row
+                    .columns.small-4
+                      select#birth-year(name="birth-year")
+                        option(value="1990") 1990
+                        option(value="1991") 1991
+                        option(value="1992") 1992
+                        option(value="1993") 1993
+                        option(value="1994") 1994
+                        option(value="1995") 1995
+                        option(value="1996") 1996
+                        option(value="1997") 1997
+                        option(value="1998") 1998
+                        option(value="1999") 1999
+                        option(value="2000") 2000
+                        option(value="2000") 2001
+                        option(value="2000") 2002
+                        option(value="2000") 2003
+                        option(value="2000") 2004
+                        option(value="2000") 2005
+                        option(value="2000") 2006
+                        option(value="2000") 2007
+                        option(value="2000") 2008
+                        option(value="2000") 2009
+                        option(value="2000") 2010
+                        option(value="2000") 2011
+                        option(value="2000") 2012
+                        option(value="2000") 2013
+                        option(value="2000") 2014
+                        option(value="2000") 2015
+                    .columns.small-4
+                      select#birth-month(name="birth-month")
+                        option(value="1") January
+                        option(value="2") February
+                        option(value="3") March
+                        option(value="4") April
+                        option(value="5") May
+                        option(value="6") June
+                        option(value="7") July
+                        option(value="8") August
+                        option(value="9") September
+                        option(value="10") October
+                        option(value="11") November
+                        option(value="12") December
+                    .columns.small-4
+                      select#birth-day(name="birth-day")
+                        option(value="1") 1
+                        option(value="2") 2
+                        option(value="3") 3
+                        option(value="4") 4
+                        option(value="5") 5
+                        option(value="6") 6
+                        option(value="7") 7
+                        option(value="8") 8
+                        option(value="9") 9
+                        option(value="10") 10
+                        option(value="11") 11
+                        option(value="12") 12
+                        option(value="13") 13
+                        option(value="14") 14
+                        option(value="15") 15
+                        option(value="16") 16
+                        option(value="17") 17
+                        option(value="18") 18
+                        option(value="19") 19
+                        option(value="20") 20
+                        option(value="21") 21
+                        option(value="22") 22
+                        option(value="23") 23
+                        option(value="24") 24
+                        option(value="25") 25
+                        option(value="26") 26
+                        option(value="27") 27
+                        option(value="28") 28
+                        option(value="29") 29
+                        option(value="30") 30
+                        option(value="31") 31
                   //- controls/ next-prev
                   div
                     a(href="#step-1").button Back

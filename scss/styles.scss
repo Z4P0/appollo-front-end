@@ -60,6 +60,10 @@
   @include circle(rem-calc(24), $silver);
   text-align: center;
   font-size: rem-calc(14);
+  &.active {
+    background-color: $blue;
+    color: $white;
+  }
 }
 
 
@@ -122,9 +126,6 @@
     top: 0;
     background-color: $white;
     z-index: -1;
-    &:first-child {
-      z-index: 1;
-    }
     &.active {
       z-index: 10;
     }
