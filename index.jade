@@ -1,0 +1,107 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Appollo Commander
+    meta(name="description", content="A web project")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="apple-touch-icon", href="apple-touch-icon.png")
+    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet", type="text/css")
+    link(rel="stylesheet", href="css/styles.css")
+
+  body
+    a(href="#main").show-for-sr Skip to main content
+    .container
+      header.header
+        .row.page-section
+          .columns
+            h1.no-margin Appollo Commander
+      main#main
+        hr
+        section#intro.row.page-section.thick-margin-bottom.align-center
+          .columns.medium-8.large-6
+            h2 Screen #2 - Profile Setup
+            div.page-section
+              //- profile progress meter
+              .profile-progress
+                span.circle 1
+                span.circle 2
+                span.circle 3
+                span.circle 4
+                .progress(role="progressbar", tabindex="0", aria-valuenow="0", aria-valuemin="0", aria-valuemax="100")
+                  .progress-meter
+                  //- .progress-meter(style="width: 50%;")
+              hr
+              //- info holder things
+              #profile-questions.profile-questions
+                #step-1.profile-question
+                  //- title/ field name
+                  h3.field-title 1. Your Name:
+                  //- input
+                  input(type="text", name="name", placeholder="Firstname Lastname")
+                  //- controls/ next-prev
+                  div
+                    a(href="#step-2").button Ok
+                #step-2.profile-question
+                  //- title/ field name
+                  h3.field-title 2. Birthday:
+                  //- input
+                  input(type="text", name="name", placeholder="Firstname Lastname")
+                  //- controls/ next-prev
+                  div
+                    a(href="#step-1").button Back
+                    a(href="#step-3").button Ok
+                #step-3.profile-question
+                  //- title/ field name
+                  h3.field-title 3. Gender:
+                  //- input
+                  label
+                    input(type="radio", name="gender", value="male")
+                    span Male
+                  label
+                    input(type="radio", name="gender", value="female")
+                    span Female
+                  //- controls/ next-prev
+                  div
+                    a(href="#step-2").button Back
+                    a(href="#step-4").button Ok
+                #step-4.profile-question
+                  //- title/ field name
+                  h3.field-title 4. Path:
+                  //- input
+                  label
+                    input(type="radio", name="path", value="engineer")
+                    span Engineer
+                  label
+                    input(type="radio", name="path", value="astronaut")
+                    span Astronaut
+                  //- controls/ next-prev
+                  div
+                    a(href="#step-3").button Back
+                    a(href="#profile-finish").button Ok
+
+        hr
+        section#mission-1.row.page-section.align-center
+          .columns.medium-8.large-6
+            h2 First Mission screen
+            p Welcome to NASA! You’ll be on the Moon team. For your first mission... determine the best time to launch the mission
+            p Identify the correct lunar phase.
+            p Waxing crescent is the correct answer
+            p Lunar cycle
+            p Learn the cycles of the moon, we want to send the astronauts when there is a bunch of light
+        hr
+        section#finish.row.page-section.align-center
+          .columns.medium-8.large-6
+            h2 End screen
+            h3 National Hero! Mission successful!
+            img(src="images/freedom.jpg", alt="")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestias dicta reprehenderit doloribus! Doloremque reprehenderit minima, magni sed odio. Non reiciendis in fuga pariatur dolores eius provident. Quae suscipit, perspiciatis.
+
+
+      footer.footer.jet-bg.white
+        .row.thin-page-section.text-right
+          .columns
+            small Appollo Commander / z a p o / 2016
+
+    script(src="js/scripts.js")

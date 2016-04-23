@@ -1,0 +1,68 @@
+{
+  "name": "appollo-commander",
+  "description": "A web project",
+  "version": "0.1.0",
+  "scripts": {
+    "html": "jade --pretty index.jade",
+    "html:watch": "jade --watch --pretty index.jade",
+    "sass": "node-sass --include-path node_modules/foundation-sites/scss scss/styles.scss css/styles.css",
+    "sass:watch": "node-sass --watch --recursive --source-map true --include-path node_modules/foundation-sites/scss scss --output css",
+    "css": "npm run sass && postcss --use css-mqpacker --use autoprefixer -o css/styles.css css/styles.css",
+    "js": "browserify js/init.js -o js/scripts.js",
+    "js:debug": "browserify js/init.js -o js/scripts.js --debug",
+    "js:watch": "watchify js/init.js -o js/scripts.js --debug",
+    "watch": "npm run html:watch & npm run sass:watch & npm run js:watch",
+    "build": "npm run html & npm run css & npm run js",
+    "server": "http-server ./ -c-1 -o",
+    "live-reload": "live-server --port=4040",
+    "servers": "npm run server & npm run live-reload",
+    "dev": "npm run watch & npm run servers",
+    "dev:server": "npm run watch & npm run server",
+    "minify:css": "postcss --use cssnano -o css/styles.min.css css/styles.css",
+    "minify:js": "uglifyjs js/scripts.js --compress --output js/scripts.min.js",
+    "minify": "npm run minify:css & npm run minify:js",
+    "export:html": "jade index.jade --out export/",
+    "export:css": "postcss --use css-mqpacker --use autoprefixer --use cssnano -o export/css/styles.css css/styles.css",
+    "export:js": "npm run js && npm run minify:js && mv js/scripts.min.js export/js/scripts.js",
+    "export:assets": "cp -r images/ export/images & cp -r misc/ export/misc & cp favicon.ico export/ & cp apple-touch-icon.png export/",
+    "preexport": "mkdir export && mkdir export/style export/scripts",
+    "export": "npm run export:html && npm run export:css && npm run export:js && npm run export:assets",
+    "postinstall": "npm run build"
+  },
+  "author": "zapo (http://luisrosar.io)",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.2",
+    "browserify": "^13.0.0",
+    "css-mqpacker": "^4.0.0",
+    "cssnano": "^3.5.2",
+    "http-server": "^0.8.5",
+    "jade": "^1.11.0",
+    "live-server": "^0.9.1",
+    "node-sass": "^3.4.2",
+    "postcss-cli": "^2.5.1",
+    "uglify-js": "^2.6.1",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "browserify-shim": "^3.8.12",
+    "cheet.js": "^0.3.3",
+    "foundation-sites": "^6.2.1",
+    "jquery": "^2.2.0"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.min.js",
+    "foundation": "./node_modules/foundation-sites/dist/foundation.min.js",
+    "cheet": "./node_modules/cheet.js/cheet.min.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "foundation": "foundation",
+    "cheet": "cheet"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}

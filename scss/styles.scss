@@ -1,0 +1,132 @@
+// setup
+@import "vars";
+@import "mixins";
+
+// foundation setup
+@import "settings";
+@import "foundation";
+// @include foundation-everything;
+// ----------------------------------------
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
+
+
+@import "utilities";
+@include create-color-classes($foundation_colors);
+@include create-color-classes($theme_colors);
+
+::selection {
+  background-color: $red;
+  color: $white;
+  text-shadow: none;
+}
+
+
+.circle {
+  @include circle(rem-calc(24), $silver);
+  text-align: center;
+  font-size: rem-calc(14);
+}
+
+
+.profile-progress {
+  position: relative;
+  padding: rem-calc(0 15);
+  margin-bottom: rem-calc(40);
+  .circle {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    transform: translateY(50%);
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      left: 33%;
+      transform: translateX(-50%) translateY(50%);
+    }
+    &:nth-child(3) {
+      left: 66%;
+      transform: translateX(-50%) translateY(50%);
+    }
+    &:nth-child(4) {
+      right: 0;
+    }
+  }
+}
+
+.profile-question {
+  @include page-section(rem-calc(30));
+  text-align: center;
+  div {
+    margin-top: rem-calc(15);
+  }
+  input[type="text"] {
+    text-align: center;
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-bottom: 0;
+  }
+  .button {
+    border-radius: rem-calc(30);
+    margin-bottom: 0;
+    margin-right: rem-calc(15);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.profile-questions {
+  position: relative;
+  .profile-question {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: $white;
+    z-index: -1;
+    &:first-child {
+      z-index: 1;
+    }
+    &.active {
+      z-index: 10;
+    }
+  }
+}
