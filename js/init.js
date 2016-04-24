@@ -1,6 +1,4 @@
-// var cheet = require('cheet');
-var xhr = require('xhr');
-// var profileSetup = require('./profileSetup.js');
+// var xhr = require('xhr');
 
 var appollo = (function () {
 
