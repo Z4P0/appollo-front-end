@@ -244,4 +244,42 @@ body {
   text-align: center;
   font-size: rem-calc(10);
   line-height: 1.4;
+  color: $tuatara;
+}
+
+
+.homepage-header {
+  padding-top: rem-calc(30);
+}
+
+.big-logo {
+  position: relative;
+  z-index: 1;
+  padding-top: rem-calc(10);
+  padding-bottom: rem-calc(10);
+  &:after {
+    content: "\0a0";
+    display: block;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $orange-dark;
+    z-index: -1;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+
+.homepage-screen {
+  @include page-section(rem-calc(30));
+  background-color: $green;
+  background-image: url(../images/background-2.jpg);
 }

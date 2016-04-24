@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Appollo Commander</title>
+    <meta name="description" content="A web project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Righteous::latin', 'Open+Sans:600:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body><a href="#main" class="show-for-sr">Skip to main content</a>
+    <div class="container">
+      <header class="header">
+        <div class="row page-section">
+          <div class="columns">
+            <h1 class="no-margin">Appollo Commander</h1>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <hr>
+        <hr>
+        <section id="checklist" class="row page-section thick-margin-bottom align-center">
+          <div class="columns medium-8 large-6">
+            <ul class="checklist">
+              <li>
+                <div class="row">
+                  <div class="columns small-4"><a href="#challenge-1">
+                      <div class="incomplete-box">?</div></a></div>
+                  <div class="columns small-8">
+                    <h3><a href="#challenge-1--mission-brief">Challenge 1 - Moon Phases</a></h3>
+                    <h4>Mission Brief</h4>
+                    <p>We need you to help us determine when to launch the mission!</p><a href="#challenge-1--mission-brief" class="button hollow mission-brief-link">Mission Brief: Unread</a>
+                    <h4>Mission Task</h4>
+                    <p>Determine the correct moon phase</p><a href="#challenge-1" class="button hollow mission-link">Mission: Start</a>
+                  </div>
+                </div>
+              </li>
+              <li><a href="#challenge-1">
+                  <div class="row">
+                    <div class="columns small-4">
+                      <div class="incomplete-box">?</div>
+                    </div>
+                    <div class="columns small-8">
+                      <h3>Challenge 2</h3>
+                      <p>Sed eligendi iure mollitia qui dignissimos neque temporibus.</p>
+                    </div>
+                  </div></a></li>
+              <li><a href="#challenge-1">
+                  <div class="row">
+                    <div class="columns small-4">
+                      <div class="incomplete-box">?</div>
+                    </div>
+                    <div class="columns small-8">
+                      <h3>Challenge 3</h3>
+                      <p>Quam saepe reiciendis consequatur et reprehenderit laboriosam.</p>
+                    </div>
+                  </div></a></li>
+            </ul>
+          </div>
+        </section>
+        <hr>
+        <section id="challenge-1--mission-brief" class="row page-section thick-margin-bottom align-center">
+          <div class="columns medium-8 large-6">
+            <div id="new-moon" class="learning-slide"><img src="images/moon-phases/Moon_new.gif" alt="">
+              <h3 class="text-center">New Moon</h3>
+              <p>The Moon's unilluminated side is facing the Earth. The Moon is not visible (except during a solar eclipse).</p><a href="#first-quarter">Ok</a>
+            </div>
+            <div id="first-quarter" class="learning-slide"><img src="images/moon-phases/Moon_firstqtr.gif" alt="">
+              <h3 class="text-center">First Quarter Moon</h3>
+              <p>One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.</p><a href="#full-moon">Ok</a>
+            </div>
+            <div id="full-moon" class="learning-slide"><img src="images/moon-phases/Moon_full.gif" alt="">
+              <h3 class="text-center">Full Moon</h3>
+              <p>The Moon's illuminated side is facing the Earth. The Moon appears to be completely illuminated by direct sunlight.</p><a href="#last-quarter">Ok</a>
+            </div>
+            <div id="last-quarter" class="learning-slide"><img src="images/moon-phases/Moon_lastqtr.gif" alt="">
+              <h3 class="text-center">Last Quarter Moon</h3>
+              <p>One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.</p><a href="#checklist">Ok</a>
+            </div>
+          </div>
+        </section>
+        <section id="challenge-1" class="row page-section align-center">
+          <div class="columns medium-8 large-6">
+            <h2>Determine the correct moon phase</h2>
+            <div id="test"><img src="images/moon-phases/Moon_lastqtr.gif" alt="">
+              <form action="#">
+                <ul class="no-bullet">
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="new"><span>New Moon</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="firstqtr"><span>First Quarter Moon</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="full"><span>Full Moon</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="lastqtr"><span>Last Quarter Moon</span>
+                    </label>
+                  </li>
+                </ul>
+                <input type="submit" value="Submit" class="button">
+              </form>
+            </div>
+            <p>Waxing crescent is the correct answer</p>
+            <p>Lunar cycle</p>
+            <p>Learn the cycles of the moon, we want to send the astronauts when there is a bunch of light</p>
+          </div>
+        </section>
+        <hr>
+        <section id="finish" class="row page-section align-center">
+          <div class="columns medium-8 large-6">
+            <h2>End screen</h2>
+            <h3>National Hero! Mission successful!</h3><img src="images/freedom.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestias dicta reprehenderit doloribus! Doloremque reprehenderit minima, magni sed odio. Non reiciendis in fuga pariatur dolores eius provident. Quae suscipit, perspiciatis.</p>
+          </div>
+        </section>
+      </main>
+      <aside class="kitchen-sink gainsboro-bg">
+        <div id="colors">
+          <h2>Colors</h2>
+          <div class="row">
+            <div class="columns small-2 page-section white-bg"></div>
+            <div class="columns small-2 page-section cream-bg"></div>
+            <div class="columns small-2 page-section green-bg"></div>
+            <div class="columns small-2 page-section orange-bg"></div>
+            <div class="columns small-2 page-section orange-dark-bg"></div>
+            <div class="columns small-2 page-section green-dark-bg"></div>
+          </div>
+        </div>
+        <div id="typography">
+          <h2>Typography</h2>
+          <h3 class="header-1">Appollo Commander 2016</h3>
+          <h3 class="header-2">Patient/Family Support</h3>
+          <h3 class="header-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nostrum necessitatibus consectetur aperiam .</h3>
+          <h3 class="header-4">Programs</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quo quibusdam, enim ea eveniet pariatur, minus ad dolorum dignissimos rerum suscipit sapiente animi iste ipsum cupiditate. Sit, nemo, architecto. Autem.</p>
+        </div>
+        <div id="buttons">
+          <h2>Buttons</h2><a href="#" class="button-1">Sign In</a>
+        </div>
+      </aside>
+      <footer class="footer jet-bg white">
+        <div class="row thin-page-section text-right">
+          <div class="columns">
+            <p>Sources:</p>
+            <ul>
+              <li><span>http://aa.usno.navy.mil/faq/docs/moon_phases.php</span></li>
+            </ul><small>Appollo Commander / z a p o / 2016</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

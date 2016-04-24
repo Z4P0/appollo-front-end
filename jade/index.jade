@@ -1,173 +1,34 @@
 doctype html
+//- only slightly different from the rest of the pages
 html(lang="en").no-js
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     title Appollo Commander
-    meta(name="description", content="A web project")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="apple-touch-icon", href="apple-touch-icon.png")
-    script(type="text/javascript").
-      WebFontConfig = {
-        google: { families: [ 'Righteous::latin', 'Open+Sans:600:latin' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-    //- link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet", type="text/css")
+    link(href='https://fonts.googleapis.com/css?family=Righteous|Open+Sans:600', rel='stylesheet', type='text/css')
     link(rel="stylesheet", href="css/styles.css")
 
   body
-    a(href="#main").show-for-sr Skip to main content
     .container
-      header.header
-        .row.page-section
-          .columns
-            h1.no-margin Appollo Commander
+      header.homepage-header
+        h1.big-logo
+          span.show-for-sr Appollo Commander
+          img(src="logo.svg", alt="", width="250", height="250")
       main#main
-        hr
-        //- screen 2 : Profile setup
-        include ./profile-setup-screen.jade
-
-        hr
-        section#checklist.row.page-section.thick-margin-bottom.align-center
-          .columns.medium-8.large-6
-            ul.checklist
-              li
-                .row
-                  .columns.small-4
-                    a(href="#challenge-1")
-                      .incomplete-box ?
-                  .columns.small-8
-                    h3
-                      a(href="#challenge-1--mission-brief") Challenge 1 - Moon Phases
-                    h4 Mission Brief
-                    p We need you to help us determine when to launch the mission!
-                    a(href="#challenge-1--mission-brief").button.hollow.mission-brief-link Mission Brief: Unread
-                    h4 Mission Task
-                    p Determine the correct moon phase
-                    a(href="#challenge-1").button.hollow.mission-link Mission: Start
-              li
-                a(href="#challenge-1")
-                  .row
-                    .columns.small-4
-                      .incomplete-box ?
-                    .columns.small-8
-                      h3 Challenge 2
-                      p Sed eligendi iure mollitia qui dignissimos neque temporibus.
-              li
-                a(href="#challenge-1")
-                  .row
-                    .columns.small-4
-                      .incomplete-box ?
-                    .columns.small-8
-                      h3 Challenge 3
-                      p Quam saepe reiciendis consequatur et reprehenderit laboriosam.
-
-
-        hr
-        section#challenge-1--mission-brief.row.page-section.thick-margin-bottom.align-center
-          .columns.medium-8.large-6
-            div#new-moon.learning-slide
-              img(src="images/moon-phases/Moon_new.gif", alt="")
-              h3.text-center New Moon
-              p The Moon's unilluminated side is facing the Earth. The Moon is not visible (except during a solar eclipse).
-              a(href="#first-quarter") Ok
-            div#first-quarter.learning-slide
-              img(src="images/moon-phases/Moon_firstqtr.gif", alt="")
-              h3.text-center First Quarter Moon
-              p One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.
-              a(href="#full-moon") Ok
-            div#full-moon.learning-slide
-              img(src="images/moon-phases/Moon_full.gif", alt="")
-              h3.text-center Full Moon
-              p The Moon's illuminated side is facing the Earth. The Moon appears to be completely illuminated by direct sunlight.
-              a(href="#last-quarter") Ok
-            div#last-quarter.learning-slide
-              img(src="images/moon-phases/Moon_lastqtr.gif", alt="")
-              h3.text-center Last Quarter Moon
-              p One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.
-              a(href="#checklist") Ok
-
-
-
-
-
-
-        section#challenge-1.row.page-section.align-center
-          .columns.medium-8.large-6
-            h2 Determine the correct moon phase
-            div#test
-              img(src="images/moon-phases/Moon_lastqtr.gif", alt="")
-              form(action="#")
-                ul.no-bullet
-                  li
-                    label
-                      input(type="radio", name="moon-choice", value="new")
-                      span New Moon
-                  li
-                    label
-                      input(type="radio", name="moon-choice", value="firstqtr")
-                      span First Quarter Moon
-                  li
-                    label
-                      input(type="radio", name="moon-choice", value="full")
-                      span Full Moon
-                  li
-                    label
-                      input(type="radio", name="moon-choice", value="lastqtr")
-                      span Last Quarter Moon
-                input(type="submit", value="Submit").button
-
-            p Waxing crescent is the correct answer
-            p Lunar cycle
-            p Learn the cycles of the moon, we want to send the astronauts when there is a bunch of light
-
-
-
-        hr
-        section#finish.row.page-section.align-center
-          .columns.medium-8.large-6
-            h2 End screen
-            h3 National Hero! Mission successful!
-            img(src="images/freedom.jpg", alt="")
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestias dicta reprehenderit doloribus! Doloremque reprehenderit minima, magni sed odio. Non reiciendis in fuga pariatur dolores eius provident. Quae suscipit, perspiciatis.
-
-
-
-      aside.kitchen-sink.gainsboro-bg
-        #colors
-          h2 Colors
+        section.homepage-screen.text-center
           .row
-            .columns.small-2.page-section.white-bg
-            .columns.small-2.page-section.cream-bg
-            .columns.small-2.page-section.green-bg
-            .columns.small-2.page-section.orange-bg
-            .columns.small-2.page-section.orange-dark-bg
-            .columns.small-2.page-section.green-dark-bg
-        #typography
-          h2 Typography
-          h3.header-1 Appollo Commander 2016
-          h3.header-2 Patient/Family Support
-          h3.header-3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nostrum necessitatibus consectetur aperiam .
-          h3.header-4 Programs
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quo quibusdam, enim ea eveniet pariatur, minus ad dolorum dignissimos rerum suscipit sapiente animi iste ipsum cupiditate. Sit, nemo, architecto. Autem.
-        #buttons
-          h2 Buttons
-          a(href="#").button-1 Sign In
+            .columns.small-12
+              h1 Welcome Space Cadet
+              p Help NASA reach the moon!
+          .row
+            .columns.small-6
+              a(href="screen-2--profile-setup.html").button-1 New User
+            .columns.small-6
+              a(href="screen-2--profile-setup.html").button-1 Sign In
 
-      footer.footer.jet-bg.white
-        .row.thin-page-section.text-right
-          .columns
-            p Sources:
-            ul
-              li
-                span http://aa.usno.navy.mil/faq/docs/moon_phases.php
-            small Appollo Commander / z a p o / 2016
+      footer.footer
+        small.copyright Appollo Commander <br/> spacemonkeys / 2016
 
     script(src="js/scripts.js")

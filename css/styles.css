@@ -1964,7 +1964,40 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 0.625rem;
-  line-height: 1.4; }
+  line-height: 1.4;
+  color: #444444; }
+
+.homepage-header {
+  padding-top: 1.875rem; }
+
+.big-logo {
+  position: relative;
+  z-index: 1;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; }
+  .big-logo:after {
+    content: "\0a0";
+    display: block;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-color: #fe560d;
+    z-index: -1; }
+  .big-logo img {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+
+.homepage-screen {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  background-color: #62b6a2;
+  background-image: url(../images/background-2.jpg); }
 
 @media screen and (min-width: 40em) {
   .row .row {
