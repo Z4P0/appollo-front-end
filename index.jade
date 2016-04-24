@@ -7,7 +7,19 @@ html(lang="en").no-js
     meta(name="description", content="A web project")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="apple-touch-icon", href="apple-touch-icon.png")
-    link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet", type="text/css")
+    script(type="text/javascript").
+      WebFontConfig = {
+        google: { families: [ 'Righteous::latin', 'Open+Sans:600:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    //- link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet", type="text/css")
     link(rel="stylesheet", href="css/styles.css")
 
   body
@@ -127,6 +139,27 @@ html(lang="en").no-js
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur molestias dicta reprehenderit doloribus! Doloremque reprehenderit minima, magni sed odio. Non reiciendis in fuga pariatur dolores eius provident. Quae suscipit, perspiciatis.
 
 
+
+      aside.kitchen-sink.gainsboro-bg
+        #colors
+          h2 Colors
+          .row
+            .columns.small-2.page-section.white-bg
+            .columns.small-2.page-section.cream-bg
+            .columns.small-2.page-section.green-bg
+            .columns.small-2.page-section.orange-bg
+            .columns.small-2.page-section.orange-dark-bg
+            .columns.small-2.page-section.green-dark-bg
+        #typography
+          h2 Typography
+          h3.header-1 Appollo Commander 2016
+          h3.header-2 Patient/Family Support
+          h3.header-3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nostrum necessitatibus consectetur aperiam .
+          h3.header-4 Programs
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quo quibusdam, enim ea eveniet pariatur, minus ad dolorum dignissimos rerum suscipit sapiente animi iste ipsum cupiditate. Sit, nemo, architecto. Autem.
+        #buttons
+          h2 Buttons
+          a(href="#").button-1 Sign In
 
       footer.footer.jet-bg.white
         .row.thin-page-section.text-right

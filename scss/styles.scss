@@ -158,3 +158,45 @@
   line-height: rem-calc(75);
   width: rem-calc(75);
 }
+
+
+
+
+// kitchen sink
+.header-1,
+.header-2,
+.header-4 {
+  text-transform: uppercase;
+}
+
+.header-1 {
+  font-size: rem-calc(60);
+}
+.header-2 {
+  font-size: rem-calc(48);
+}
+.header-3 {
+  font-family: $open-sans;
+  font-size: rem-calc(18);
+}
+.header-4 {
+  font-size: rem-calc(28);
+}
+
+
+.button-1 {
+  display: inline-block;
+  font-family: $righteous;
+  text-transform: uppercase;
+  border: 3px solid $tuatara;
+  border-radius: rem-calc(30);
+  background-color: transparent;
+  color: $tuatara;
+  padding: rem-calc(4 16);
+  transition: 0.3s background-color ease;
+  will-change: background-color;
+  &:hover {
+    color: $white;
+    background-color: $tuatara;
+  }
+}

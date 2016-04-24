@@ -2,12 +2,21 @@
 // be sure to add the vars to the $theme_colors
 $red        : #b92d19;
 $blue       : #2390dc;
-$green      : #b2c936;
+
+$cream: #fcebb8;
+$green: #62b6a2;
+$orange: #ffa440;
+$orange-dark: #fe560d;
+$green-dark: #11535e;
 
 $theme_colors: (
   "red":         $red,
   "blue":        $blue,
-  "green":       $green,
+  "cream": $cream,
+  "green": $green,
+  "orange": $orange,
+  "orange-dark": $orange-dark,
+  "green-dark": $green-dark
 );
 
 // foundation legacy colors
@@ -58,6 +67,11 @@ $foundation_colors: (
 $source-sans: 'Source Sans Pro';  // add to appropriate font stack and uncomment
 // $font-family-sans-serif: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+
+
+$righteous: 'Righteous', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
 
 // $light: 300;
 // $regular: 400;

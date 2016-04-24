@@ -7,7 +7,19 @@
     <meta name="description" content="A web project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Righteous::latin', 'Open+Sans:600:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body><a href="#main" class="show-for-sr">Skip to main content</a>
@@ -261,6 +273,30 @@
           </div>
         </section>
       </main>
+      <aside class="kitchen-sink gainsboro-bg">
+        <div id="colors">
+          <h2>Colors</h2>
+          <div class="row">
+            <div class="columns small-2 page-section white-bg"></div>
+            <div class="columns small-2 page-section cream-bg"></div>
+            <div class="columns small-2 page-section green-bg"></div>
+            <div class="columns small-2 page-section orange-bg"></div>
+            <div class="columns small-2 page-section orange-dark-bg"></div>
+            <div class="columns small-2 page-section green-dark-bg"></div>
+          </div>
+        </div>
+        <div id="typography">
+          <h2>Typography</h2>
+          <h3 class="header-1">Appollo Commander 2016</h3>
+          <h3 class="header-2">Patient/Family Support</h3>
+          <h3 class="header-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet nostrum necessitatibus consectetur aperiam .</h3>
+          <h3 class="header-4">Programs</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quo quibusdam, enim ea eveniet pariatur, minus ad dolorum dignissimos rerum suscipit sapiente animi iste ipsum cupiditate. Sit, nemo, architecto. Autem.</p>
+        </div>
+        <div id="buttons">
+          <h2>Buttons</h2><a href="#" class="button-1">Sign In</a>
+        </div>
+      </aside>
       <footer class="footer jet-bg white">
         <div class="row thin-page-section text-right">
           <div class="columns">
