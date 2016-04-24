@@ -131,3 +131,30 @@
     }
   }
 }
+
+
+.checklist {
+  list-style: none;
+  li {
+    margin-bottom: rem-calc(30);
+    opacity: 0.3;
+    pointer-events: none;
+    &:first-child {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+  a {
+    display: block;
+    color: inherit;
+  }
+}
+
+.incomplete-box {
+  border: 2px dashed $silver;
+  text-align: center;
+  font-size: rem-calc(50);
+  color: $charcoal;
+  line-height: rem-calc(75);
+  width: rem-calc(75);
+}
