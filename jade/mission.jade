@@ -1,0 +1,33 @@
+extends ./type--page.jade
+
+block content
+  section#challenge-1.row.align-center
+    .columns.medium-8.large-6
+      h2 Lunar Phases: Mission
+      .page-section.green-bg
+        .row.align-center
+          .columns.small-11
+            div#test
+              img(src="images/moon-phases/Moon_lastqtr.gif", alt="")
+              p Identify this moon phase
+              hr
+              form(action="#")
+                ul.no-bullet
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="new")
+                      span New Moon
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="firstqtr")
+                      span First Quarter Moon
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="full")
+                      span Full Moon
+                  //- li
+                    label
+                      input(type="radio", name="moon-choice", value="lastqtr")
+                      span Last Quarter Moon
+                input(type="submit", value="Submit").button
+            //- p Waxing crescent is the correct answer
