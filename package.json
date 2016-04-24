@@ -30,7 +30,7 @@
     "postinstall": "npm run build"
   },
   "author": "zapo (http://luisrosar.io)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.2",
     "browserify": "^13.0.0",
