@@ -34,7 +34,7 @@
               <div id="profile-questions" class="profile-questions">
                 <div id="step-1" class="profile-question active">
                   <h3 class="field-title">1. Your Name:</h3>
-                  <input id="name" type="text" name="name" placeholder="Firstname Lastname">
+                  <input id="name" type="text" name="name" placeholder="Firstname Lastname" value="zapo">
                   <div><a href="#step-2" class="button">Ok</a></div>
                 </div>
                 <div id="step-2" class="profile-question">
@@ -43,7 +43,7 @@
                     <div class="columns small-4">
                       <select id="birth-year" name="birth-year">
                         <option value="1990">1990</option>
-                        <option value="1991">1991</option>
+                        <option value="1991" selected>1991</option>
                         <option value="1992">1992</option>
                         <option value="1993">1993</option>
                         <option value="1994">1994</option>
@@ -72,18 +72,18 @@
                     </div>
                     <div class="columns small-4">
                       <select id="birth-month" name="birth-month">
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October" selected>October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
                       </select>
                     </div>
                     <div class="columns small-4">
@@ -102,7 +102,7 @@
                         <option value="12">12</option>
                         <option value="13">13</option>
                         <option value="14">14</option>
-                        <option value="15">15</option>
+                        <option value="15" selected>15</option>
                         <option value="16">16</option>
                         <option value="17">17</option>
                         <option value="18">18</option>
@@ -127,7 +127,7 @@
                 <div id="step-3" class="profile-question">
                   <h3 class="field-title">3. Gender:</h3>
                   <label>
-                    <input type="radio" name="gender" value="male"><span>Male</span>
+                    <input type="radio" name="gender" value="male" checked><span>Male</span>
                   </label>
                   <label>
                     <input type="radio" name="gender" value="female"><span>Female</span>
@@ -137,13 +137,21 @@
                 <div id="step-4" class="profile-question">
                   <h3 class="field-title">4. Path:</h3>
                   <label>
-                    <input type="radio" name="path" value="engineer"><span>Engineer</span>
+                    <input type="radio" name="path" value="engineer" checked><span>Engineer</span>
                   </label>
                   <label>
                     <input type="radio" name="path" value="astronaut"><span>Astronaut</span>
                   </label>
                   <div><a href="#step-3" class="button">Back</a><a href="#profile-finish" class="button">Ok</a></div>
                 </div>
+              </div>
+            </div>
+            <div id="profile-finish" class="page-section">
+              <div class="text-center">
+                <h2>Great, <span data-username></span>!</h2>
+                <p>You're set to take off in</p>
+                <p id="countdown">10 : 55</p>
+                <p>But first we need to see if you're ready!</p><a href="#checklist">Ok</a>
               </div>
             </div>
           </div>

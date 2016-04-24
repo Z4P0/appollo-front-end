@@ -39,7 +39,7 @@ html(lang="en").no-js
                   //- title/ field name
                   h3.field-title 1. Your Name:
                   //- input
-                  input#name(type="text", name="name", placeholder="Firstname Lastname")
+                  input#name(type="text", name="name", placeholder="Firstname Lastname", value="zapo")
                   //- controls/ next-prev
                   div
                     a(href="#step-2").button Ok
@@ -50,7 +50,7 @@ html(lang="en").no-js
                     .columns.small-4
                       select#birth-year(name="birth-year")
                         option(value="1990") 1990
-                        option(value="1991") 1991
+                        option(value="1991", selected) 1991
                         option(value="1992") 1992
                         option(value="1993") 1993
                         option(value="1994") 1994
@@ -77,18 +77,18 @@ html(lang="en").no-js
                         option(value="2000") 2015
                     .columns.small-4
                       select#birth-month(name="birth-month")
-                        option(value="1") January
-                        option(value="2") February
-                        option(value="3") March
-                        option(value="4") April
-                        option(value="5") May
-                        option(value="6") June
-                        option(value="7") July
-                        option(value="8") August
-                        option(value="9") September
-                        option(value="10") October
-                        option(value="11") November
-                        option(value="12") December
+                        option(value="January") January
+                        option(value="February") February
+                        option(value="March") March
+                        option(value="April") April
+                        option(value="May") May
+                        option(value="June") June
+                        option(value="July") July
+                        option(value="August") August
+                        option(value="September") September
+                        option(value="October", selected) October
+                        option(value="November") November
+                        option(value="December") December
                     .columns.small-4
                       select#birth-day(name="birth-day")
                         option(value="1") 1
@@ -105,7 +105,7 @@ html(lang="en").no-js
                         option(value="12") 12
                         option(value="13") 13
                         option(value="14") 14
-                        option(value="15") 15
+                        option(value="15", selected) 15
                         option(value="16") 16
                         option(value="17") 17
                         option(value="18") 18
@@ -131,7 +131,7 @@ html(lang="en").no-js
                   h3.field-title 3. Gender:
                   //- input
                   label
-                    input(type="radio", name="gender", value="male")
+                    input(type="radio", name="gender", value="male", checked)
                     span Male
                   label
                     input(type="radio", name="gender", value="female")
@@ -145,7 +145,7 @@ html(lang="en").no-js
                   h3.field-title 4. Path:
                   //- input
                   label
-                    input(type="radio", name="path", value="engineer")
+                    input(type="radio", name="path", value="engineer", checked)
                     span Engineer
                   label
                     input(type="radio", name="path", value="astronaut")
@@ -154,6 +154,16 @@ html(lang="en").no-js
                   div
                     a(href="#step-3").button Back
                     a(href="#profile-finish").button Ok
+
+
+            div#profile-finish.page-section
+              .text-center
+                h2 Great, <span data-username></span>!
+                p You're set to take off in
+                p#countdown 10 : 55
+                p But first we need to see if you're ready!
+                a(href="#checklist") Ok
+
 
         hr
         section#mission-1.row.page-section.align-center
