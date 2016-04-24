@@ -7,15 +7,15 @@ var appollo = (function () {
     'use strict';
 
 
-    var moonPhasesDataURL = 'moon-phases.json';
-    var moonPhasesJSON;
+    // var moonPhasesDataURL = 'moon-phases.json';
+    // var moonPhasesJSON;
     var user = {};
 
 
 
-    function processMoonPhaseData (err, response, body) {
-        moonPhasesJSON = JSON.parse(body);
-    }
+    // function processMoonPhaseData (err, response, body) {
+    //     moonPhasesJSON = JSON.parse(body);
+    // }
 
 
 
@@ -57,29 +57,16 @@ var appollo = (function () {
                 }
 
 
-                // if (event.target.hash !== '#profile-finish') {
-                    // add the new active class
-                    domNode.querySelector(event.target.hash).classList.toggle('active');
-                // } else {
-                //     // all fields submitted, create profile
-                //     // createProfile(profileData)
-                //     console.log(user);
-                // }
+                domNode.querySelector(event.target.hash).classList.toggle('active');
             }
         });
     }
 
 
-    function profilePageEventHandler (event) {
-
-    }
-
-
-
 
     function init() {
-        // load up moon-phases data
-        xhr.get(moonPhasesDataURL, processMoonPhaseData);
+        // // load up moon-phases data
+        // xhr.get(moonPhasesDataURL, processMoonPhaseData);
 
         var profileQuestions = document.querySelector('#profile-questions');
         if (profileQuestions !== null) {

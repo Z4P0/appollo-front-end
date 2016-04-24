@@ -135,6 +135,7 @@
 
 .checklist {
   list-style: none;
+  margin: 0;
   li {
     margin-bottom: rem-calc(30);
     opacity: 0.3;
@@ -151,7 +152,7 @@
 }
 
 .incomplete-box {
-  border: 2px dashed $silver;
+  border: 2px solid rgba($tuatara, 0.3);
   text-align: center;
   font-size: rem-calc(50);
   color: $charcoal;
@@ -159,6 +160,11 @@
   width: rem-calc(75);
 }
 
+.fake-circle {
+  @include circle(rem-calc(16), transparent);
+  border: 1px solid $tuatara;
+  margin-right: rem-calc(5);
+}
 
 
 
