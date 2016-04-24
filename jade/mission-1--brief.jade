@@ -1,0 +1,25 @@
+extends ./type--page.jade
+
+block content
+  section#challenge-1--mission-brief.row.page-section.thick-margin-bottom.align-center
+    .columns.medium-8.large-6
+      div#new-moon.learning-slide
+        img(src="images/moon-phases/Moon_new.gif", alt="")
+        h3 New Moon
+        p The Moon's unilluminated side is facing the Earth. The Moon is not visible (except during a solar eclipse).
+        a(href="#first-quarter").button-1 Next
+      div#first-quarter.learning-slide
+        img(src="images/moon-phases/Moon_firstqtr.gif", alt="")
+        h3 First Quarter Moon
+        p One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is increasing.
+        a(href="#full-moon").button-1 Next
+      div#full-moon.learning-slide
+        img(src="images/moon-phases/Moon_full.gif", alt="")
+        h3 Full Moon
+        p The Moon's illuminated side is facing the Earth. The Moon appears to be completely illuminated by direct sunlight.
+        a(href="#last-quarter").button-1 Next
+      div#last-quarter.learning-slide
+        img(src="images/moon-phases/Moon_lastqtr.gif", alt="")
+        h3 Last Quarter Moon
+        p One-half of the Moon appears to be illuminated by direct sunlight. The fraction of the Moon's disk that is illuminated is decreasing.
+        a(href="#checklist").button-1 Next

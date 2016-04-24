@@ -1869,10 +1869,22 @@ select {
     left: 0;
     right: 0;
     top: 0;
-    background-color: #fefefe;
+    background-color: #62b6a2;
     z-index: -1; }
     .profile-questions .profile-question.active {
       z-index: 10; }
+
+.learning-slide {
+  background-color: #62b6a2;
+  padding: 1.875rem;
+  margin-bottom: 0.9375rem;
+  text-align: center; }
+  .learning-slide h3 {
+    margin-top: 0.625rem;
+    text-transform: uppercase;
+    font-size: 1.5rem; }
+    .learning-slide h3:after {
+      content: ":"; }
 
 .checklist {
   list-style: none;
@@ -1953,9 +1965,6 @@ select {
     display: block;
     -webkit-transform: translateX(20%) translateY(20%);
             transform: translateX(20%) translateY(20%); }
-
-html, body, .container {
-  height: 100%; }
 
 body {
   padding: 0.9375rem; }
