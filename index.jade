@@ -34,8 +34,12 @@ html(lang="en").no-js
                   .columns.small-8
                     h3
                       a(href="#challenge-1--mission-brief") Challenge 1 - Moon Phases
-                    a(href="#challenge-1--mission-brief").mission-brief-link Mission Brief: Unread
+                    h4 Mission Brief
                     p We need you to help us determine when to launch the mission!
+                    a(href="#challenge-1--mission-brief").button.hollow.mission-brief-link Mission Brief: Unread
+                    h4 Mission Task
+                    p Determine the correct moon phase
+                    a(href="#challenge-1").button.hollow.mission-link Mission: Start
               li
                 a(href="#challenge-1")
                   .row
@@ -85,9 +89,29 @@ html(lang="en").no-js
 
         section#challenge-1.row.page-section.align-center
           .columns.medium-8.large-6
-            h2 First Mission screen
-            p Welcome to NASA! You’ll be on the Moon team. For your first mission... determine the best time to launch the mission
-            p Identify the correct lunar phase.
+            h2 Determine the correct moon phase
+            div#test
+              img(src="images/moon-phases/Moon_lastqtr.gif", alt="")
+              form(action="#")
+                ul.no-bullet
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="new")
+                      span New Moon
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="firstqtr")
+                      span First Quarter Moon
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="full")
+                      span Full Moon
+                  li
+                    label
+                      input(type="radio", name="moon-choice", value="lastqtr")
+                      span Last Quarter Moon
+                input(type="submit", value="Submit").button
+
             p Waxing crescent is the correct answer
             p Lunar cycle
             p Learn the cycles of the moon, we want to send the astronauts when there is a bunch of light

@@ -165,8 +165,11 @@
                   <div class="columns small-4"><a href="#challenge-1">
                       <div class="incomplete-box">?</div></a></div>
                   <div class="columns small-8">
-                    <h3><a href="#challenge-1--mission-brief">Challenge 1 - Moon Phases</a></h3><a href="#challenge-1--mission-brief" class="mission-brief-link">Mission Brief: Unread</a>
-                    <p>We need you to help us determine when to launch the mission!</p>
+                    <h3><a href="#challenge-1--mission-brief">Challenge 1 - Moon Phases</a></h3>
+                    <h4>Mission Brief</h4>
+                    <p>We need you to help us determine when to launch the mission!</p><a href="#challenge-1--mission-brief" class="button hollow mission-brief-link">Mission Brief: Unread</a>
+                    <h4>Mission Task</h4>
+                    <p>Determine the correct moon phase</p><a href="#challenge-1" class="button hollow mission-link">Mission: Start</a>
                   </div>
                 </div>
               </li>
@@ -216,9 +219,34 @@
         </section>
         <section id="challenge-1" class="row page-section align-center">
           <div class="columns medium-8 large-6">
-            <h2>First Mission screen</h2>
-            <p>Welcome to NASA! You’ll be on the Moon team. For your first mission... determine the best time to launch the mission</p>
-            <p>Identify the correct lunar phase.</p>
+            <h2>Determine the correct moon phase</h2>
+            <div id="test"><img src="images/moon-phases/Moon_lastqtr.gif" alt="">
+              <form action="#">
+                <ul class="no-bullet">
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="new"><span>New Moon</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="firstqtr"><span>First Quarter Moon</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="full"><span>Full Moon</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="moon-choice" value="lastqtr"><span>Last Quarter Moon</span>
+                    </label>
+                  </li>
+                </ul>
+                <input type="submit" value="Submit" class="button">
+              </form>
+            </div>
             <p>Waxing crescent is the correct answer</p>
             <p>Lunar cycle</p>
             <p>Learn the cycles of the moon, we want to send the astronauts when there is a bunch of light</p>
