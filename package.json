@@ -3,8 +3,8 @@
   "description": "A web project",
   "version": "0.1.0",
   "scripts": {
-    "html": "jade --pretty index.jade",
-    "html:watch": "jade --watch --pretty index.jade",
+    "html": "jade --pretty jade/*.jade jade/*.jade -o ./",
+    "html:watch": "jade --pretty --watch jade/*.jade jade/*.jade -o ./",
     "sass": "node-sass --include-path node_modules/foundation-sites/scss scss/styles.scss css/styles.css",
     "sass:watch": "node-sass --watch --recursive --source-map true --include-path node_modules/foundation-sites/scss scss --output css",
     "css": "npm run sass && postcss --use css-mqpacker --use autoprefixer -o css/styles.css css/styles.css",

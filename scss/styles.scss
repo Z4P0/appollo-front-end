@@ -200,3 +200,48 @@
     background-color: $tuatara;
   }
 }
+
+.header {
+  margin-bottom: rem-calc(30);
+}
+
+.logo {
+  background-color: $orange-dark;
+  width: rem-calc(60);
+  height: rem-calc(60);
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+    display: block;
+    transform: translateX(20%) translateY(20%);
+  }
+}
+
+
+html, body, .container {
+  height: 100%;
+}
+body {
+  padding: rem-calc(15);
+}
+.container {
+  background-color: $cream;
+  background-image: url(../images/background-1.jpg);
+  position: relative;
+  padding-bottom: rem-calc(58);
+}
+
+.footer {
+  @include page-section(rem-calc(15));
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+}
+.copyright {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: rem-calc(10);
+  line-height: 1.4;
+}

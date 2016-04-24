@@ -1,0 +1,27 @@
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    title Appollo Commander
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="apple-touch-icon", href="apple-touch-icon.png")
+    link(href='https://fonts.googleapis.com/css?family=Righteous|Open+Sans:600', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", href="css/styles.css")
+
+  body
+    .container
+      header.header
+        h1.logo
+          span.show-for-sr Appollo Commander
+          img(src="images/ship-horizontal.svg", alt="", width="125", height="125")
+      main#main
+        section
+          block content
+            p Things go in here
+            //- include ./profile-setup-screen.jade
+
+      footer.footer
+        small.copyright Appollo Commander <br/> spacemonkeys / 2016
+
+    script(src="js/scripts.js")
