@@ -3,7 +3,7 @@ extends ./type--page.jade
 block content
   section#intro.row.page-section.thick-margin-bottom.align-center
     .columns.medium-8.large-6
-      h2 Screen #2 - Profile Setup
+      h2 New User Profile
       div.page-section
         //- profile progress meter
         .profile-progress
@@ -136,12 +136,10 @@ block content
             div
               a(href="#step-3").button Back
               a(href="#profile-finish").button Ok
-
-
-      div#profile-finish.page-section
-        .text-center
-          h2 Great, <span data-username></span>!
-          p You're set to take off in
-          p#countdown 10 : 55
-          p But first we need to see if you're ready!
-          a(href="#checklist") Ok
+          #profile-finish.profile-question
+            .text-center
+              h2 Great, <span data-username></span>!
+              p You're set to take off in
+              p#countdown 10 : 55
+              p But first we need to see if you're ready!
+              a(href="mission-center.html") Ok

@@ -20,14 +20,7 @@ var appollo = (function () {
 
 
 
-    // function createProfile (profileData) {
-    //     console.log(profileData);
-    // }
-
-
-
     function setupProfilePage (domNode) {
-        // var profileData = [];
 
         // set the height of the domNode to equal that of the first question
         domNode.setAttribute('style', 'height: ' + domNode.firstElementChild.clientHeight + 'px;');
@@ -44,7 +37,6 @@ var appollo = (function () {
                     user.name = domNode.querySelector('#name').value;
                 } else if (questionId === 'step-2') {
                     // get birthday info
-                    // console.log(domNode.querySelector('#birth-year').value);
                     user.birth = {
                         year: domNode.querySelector('#birth-year').value,
                         month: domNode.querySelector('#birth-month').value,
@@ -66,14 +58,14 @@ var appollo = (function () {
                 }
 
 
-                if (event.target.hash !== '#profile-finish') {
+                // if (event.target.hash !== '#profile-finish') {
                     // add the new active class
                     domNode.querySelector(event.target.hash).classList.toggle('active');
-                } else {
-                    // all fields submitted, create profile
-                    // createProfile(profileData)
-                    console.log(user);
-                }
+                // } else {
+                //     // all fields submitted, create profile
+                //     // createProfile(profileData)
+                //     console.log(user);
+                // }
             }
         });
     }
